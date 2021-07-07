@@ -1,6 +1,5 @@
 package com.frankmoley.lil.sbet.landon.roomwebapp.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.frankmoley.lil.sbet.landon.roomwebapp.data.RoomRepository;
@@ -17,5 +16,9 @@ public class RoomService {
 
     public List<Room> getAllRooms(){
         return roomRepository.findAll();
+    }
+
+    public Room getById(long id) {
+        return roomRepository.findById(id).get();
     }
 }
